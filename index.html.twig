@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+<!-- Header section -->
+<header>
+  <h1>
+    <img src="https://www.wildcodeschool.com/assets/logo_main-e4f3f744c8e717f1b7df3858dce55a86c63d4766d5d9a7f454250145f097c2fe.png" alt="Wild Code School logo" />
+     {% for post in post %}
+    {{post.titre}}
+  </h1>
+</header>
+
+<!-- Main section -->
+<main>
+  
+  <!-- New member form -->
+  <h2>{{post.titre2}}
+  {{ form(form)}}</h2>
+  
+    
+  </form>
+  
+  <!-- Member list -->
+  <h2>{{post.titre3}}</h2>
+  <section class="member-list">
+    <div class="member-item">{{post.membre}}</div>
+    <div class="member-item"{{post.membre2}}</div>
+    <div class="member-item">{{post.membre3}}</div>
+{% endfor %}
+
+  </section>
+</main>
+
+
+{% for post in post %}
+<footer>
+  <p>{{post.footer}}</p>
+</footer>
+
+{% endfor %} 
+{% endblock %}
